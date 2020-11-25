@@ -17,7 +17,7 @@ The project use FLask as  the server and Micropython for NodeMCU
  	
 ## NodeMCU 
  	
- 	Download from [micropython firmware](https://micropython.org/download/esp8266/)
+Download from [micropython firmware](https://micropython.org/download/esp8266/)
  	
  	Upload the firmware using esptool
  		'esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin'
