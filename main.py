@@ -53,10 +53,15 @@ print(station.ifconfig())
 def onMessage(topic, msg):
     print("Topic: %s, Message: %s" % (topic, msg))
  
-    if msg == b"on":      
+    if msg == b"on":  
         led.value(1)
+        client.publish("statu","on")    
+        time.sleep(5)
+        # led.value(0)
     elif msg == b"off":
-        led.off()
+        led.value(0)
+        client.publish("status","off")
+        time.sleep(5)
 
 def listen():
     #Create an instance of MQTTClient 
